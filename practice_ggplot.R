@@ -28,4 +28,18 @@ starwars %>%
 # Gayoung
 
 # boxplot
+ggplot(data= starwars)+
+  aes(x = height, y =mass)+
+  geom_boxplot() + #boxplot
+  scale_y_log10() +
+  theme_light() +
+  ggtitle("Boxplot for height and mass")# +
+#coord_flip()
+
+
 # facet_wrap
+ggplot(data= starwars)+
+  aes(x = height, y =mass) +
+  geom_point() +
+  facet_wrap(.~eye_color) 
+
