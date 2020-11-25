@@ -15,11 +15,8 @@ https://washington.zoom.us/xxx
 - Backup: https://rstudio.cloud/ 
 
 ### 2. Starting a new RStudio project & installing R pkgs (DG) 
-- Create a new RStudio project because it takes care of working direction (no git)
-- `install.packages("blogdown")`
-- `blogdown::install_hugo(force = TRUE)`
-- `blogdown::new_site(theme = "gcushen/hugo-academic", theme_example = TRUE)`
-- Backup: https://bwaycer.github.io/hugo_tutorial.hugo/tutorials/installing-on-mac/
+- Create a new RStudio project 
+- `install.packages("tidyverse")`
 
 ## Setup instructions
 
@@ -69,15 +66,6 @@ Before you join the workshop, please make sure you have the most recent versions
         <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
 </p>
 
-
-
-Time: 
-
-
-
 Further reading:
-
-
-
 
 Content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).
