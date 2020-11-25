@@ -2,17 +2,25 @@
 
 Delaney Glass, Li-Ying Wang, Gayoung Park, Anwesha Pan, Monica Keith, Shane Scaggs, Ben Marwick, & Melanie Martin
 
-## Join Zoom Meeting
+## Details
+
+Date and time:
 
 You can join our workshop at this link:
 https://washington.zoom.us/xxx
+
+Here are our [slides](https://docs.google.com/presentation/d/15c764TPcJWQvoZasN5PtVxpwyyqEuLm8V-n7brMvx2I/edit#slide=id.gc6f90357f_0_0)
+
+Backup is https://rstudio.cloud/ if you have a problem with your computer.
+
+## Outline
 
 ### 1. Finding your way around R and RStudio (DG)
 - Check everyone could download and open R & RStudio
 - Check version numbers for R (we want 4.0.2)
 - A brief tour of the main panes (Console, Files, Environ, text editor, pkgs and help) 
 - Have to make sure everyone can make the console work before we move on, e.g. console as a calculator 
-- Backup: https://rstudio.cloud/ 
+
 
 ### 2. Starting a new RStudio project & installing R pkgs (DG) 
 - Create a new RStudio project 
