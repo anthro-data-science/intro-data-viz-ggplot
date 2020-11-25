@@ -2,7 +2,7 @@
 
 library(tidyverse)
 
-View(starwars)
+View(starwars) 
 str(starwars)
 names(starwars)
 
@@ -28,8 +28,9 @@ starwars %>%
 # Gayoung
 
 # boxplot
-ggplot(data= starwars)+
-  aes(x = height, y =mass)+
+starwars %>% 
+  select(height, mass, eye_color) %>% 
+  ggplot(aes(height, mass, color = eye_color))+
   geom_boxplot() + #boxplot
   scale_y_log10() +
   theme_light() +
@@ -38,8 +39,10 @@ ggplot(data= starwars)+
 
 
 # facet_wrap
-ggplot(data= starwars)+
-  aes(x = height, y =mass) +
+starwars %>% 
+  select(height, mass, eye_color) %>% 
+  drop_na() %>% 
+  ggplot(aes(height, mass, color = eye_color)) +
   geom_point() +
   facet_wrap(.~eye_color) 
 
