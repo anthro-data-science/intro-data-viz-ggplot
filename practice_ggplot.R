@@ -66,13 +66,36 @@ box_simple +
 
 #########################################
 
-
-
 # facet_wrap
 starwars %>% 
   select(height, mass, eye_color) %>% 
-  drop_na() %>% 
-  ggplot(aes(height, mass, color = eye_color)) +
+  drop_na() %>% #drop NA 
+  ggplot(aes(height, mass)) +
   geom_point() +
-  facet_wrap(.~eye_color) 
+  facet_wrap(~eye_color)
+
+# facet : setting y scale to free
+starwars %>% 
+  select(height, mass, eye_color) %>% 
+  drop_na() %>% #drop NA 
+  ggplot(aes(height, mass)) +
+  geom_point() +
+  facet_wrap(~eye_color, scales = "free_y")
+
+# get rid of outlier
+facet_simple <-
+  starwars %>% 
+  select(height, mass, eye_color) %>% 
+  filter(mass < 1000) %>% # drop outlier
+  drop_na() %>% 
+  ggplot(aes(height, mass)) +
+  geom_point(color = "blue") + #change the point color to blue
+  facet_wrap(~eye_color)
+
+#add labels 
+facet_simple + 
+  theme_solarized() +
+  ggtitle("Boxplot for height and mass") +
+  labs (x= "Height (cm)",
+        y= "Mass (kg)")
 
