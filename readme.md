@@ -4,10 +4,10 @@ Delaney Glass, Li-Ying Wang, Gayoung Park, Anwesha Pan, Monica Keith, Shane Scag
 
 ## Details
 
-Date and time:
+Date and time: 12/15/20 9am-11am Pacific Standard Time
 
 You can join our workshop at this link:
-https://washington.zoom.us/xxx
+https://washington.zoom.us/j/91569853974 
 
 Here are our [slides](https://docs.google.com/presentation/d/15c764TPcJWQvoZasN5PtVxpwyyqEuLm8V-n7brMvx2I/edit#slide=id.gc6f90357f_0_0)
 
