@@ -21,10 +21,27 @@ Backup is https://rstudio.cloud/ if you have a problem with your computer.
 - A brief tour of the main panes (Console, Files, Environ, text editor, pkgs and help) 
 - Have to make sure everyone can make the console work before we move on, e.g. console as a calculator 
 
-
 ### 2. Starting a new RStudio project & installing R pkgs (DG) 
 - Create a new RStudio project 
-- `install.packages("tidyverse")`
+- Run `install.packages("tidyverse")` in the console
+
+### 3. reading and inspecting data (LW)
+- Read data and take a look, intro to dataframe
+- Get basic summary information about our dataset
+
+### 4. Data manipulation with dplyr and tidyr (LW)
+- Select specific columns and rows using select () and filter ()
+- Intro to the concept of pipes
+- Create new columns using mutate ()
+
+### 5. Data visualization with ggplot2- Histogram and Scatterplots (LW)
+- Histogram for one variable
+- Scatterplots for two variables 
+
+### 6. Data visualization with ggplot2- Boxplots and Faceting (GP)
+- Boxplots and play with themes
+- Faceting to create multiple plots
+- Name a title and change X & Y axis labels
 
 ## Setup instructions
 
