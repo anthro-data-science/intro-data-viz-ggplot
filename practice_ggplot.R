@@ -30,7 +30,7 @@ starwars %>%
 # boxplot: simple
 box_simple <- starwars %>% 
   select(height, mass, eye_color) %>% 
-  ggplot(aes(height, mass, color = eye_color))+
+  ggplot(aes(height, mass, color = eye_color)) +
   geom_boxplot() + #boxplot
   scale_y_log10()
 
@@ -38,7 +38,8 @@ box_simple <- starwars %>%
 box_simple +
   theme_dark() 
 
-#using different pkg to try other themes. https://ggplot2-book.org/polishing.html
+#using different pkg to try other themes. 
+#https://ggplot2-book.org/polishing.html
 install.packages('ggthemes', dependencies = TRUE)
 library(ggthemes)
 box_simple +
@@ -92,7 +93,7 @@ facet_simple <-
   geom_point(color = "blue") + #change the point color to blue
   facet_wrap(~eye_color)
 
-#add labels 
+#add theme and labels 
 facet_simple + 
   theme_solarized() +
   ggtitle("Boxplot for height and mass") +
