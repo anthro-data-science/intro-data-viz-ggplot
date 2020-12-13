@@ -1,32 +1,109 @@
-# Liying
-
+# Li-Ying
+#############################################
+# Demonstration 1: Inspecting data
 library(tidyverse)
 
+# take a look at the dataframe
 View(starwars) 
-str(starwars)
+
+# quick way to check variables we have
 names(starwars)
 
-# talk about %>% 
-# talk filter
-# talk select
+# display the internal structure of data
+str(starwars)
 
-# historgram
-starwars %>% 
-  filter(species == "Human") %>% 
-  ggplot(aes(height)) +
+# get basic summary of data
+summary(starwars)
+
+#############################################
+# Demonstration 2: Data manipulation
+# use select, filter, and mutate
+starwars_selected <-
+  starwars %>% # the pipe takes everything before it to the next function call. Shift + command + M
+  select(height, 
+         mass, 
+         eye_color, 
+         species) %>% # simplify dataset
+  filter(species == "Human") %>% # filter specific data points
+  mutate(BMI = mass/(height/100)^2) # create a new variable
+
+#############################################
+# ggplot demonstration 1: Histogram
+# histogram for height
+starwars_selected %>% 
+  ggplot(aes(BMI)) +
   geom_histogram() +
   theme_minimal()
 
-# scatter plot
+# histogram for mass 
 starwars %>% 
-  select(height, mass, eye_color) %>% 
-  ggplot(aes(height, mass, color = eye_color)) +
+  ggplot(aes(mass)) +
+  geom_histogram() +
+  theme_minimal()
+
+# only mass less than 1000
+starwars %>% 
+  filter(mass < 1000) %>% 
+  ggplot(aes(mass)) +
+  geom_histogram() +
+  theme_minimal()
+
+#############################################
+# ggplot demonstration 2: Scatter plot
+# scatter plot for height and mass
+starwars %>% 
+  select(height, mass, eye_color, sex) %>% 
+  ggplot(aes(height, mass)) +
+  geom_point() +
+  theme_minimal()
+
+# log value
+starwars %>% 
+  select(height, mass, eye_color, sex) %>% 
+  ggplot(aes(height, mass)) +
   geom_point() +
   scale_y_log10() +
   theme_minimal()
 
+# add two more variables represented by color and shape
+starwars %>% 
+  select(height, mass, eye_color, sex) %>% 
+  ggplot(aes(height, mass, 
+             color = eye_color, 
+             shape = sex)) +
+  geom_point() +
+  scale_y_log10() +
+  theme_minimal()
+
+# increase point size and remove NA values
+starwars %>% 
+  select(height, mass, eye_color, sex) %>%
+  filter(!is.na(sex)) %>% 
+  ggplot(aes(height, mass, 
+             color = eye_color, 
+             shape = sex)) +
+  geom_point(size = 3, 
+             alpha = 0.7) +
+  scale_y_log10() +
+  theme_minimal()
+
+# update the labels of x and y axis
+starwars %>% 
+  select(height, mass, eye_color, sex) %>%
+  filter(!is.na(sex)) %>% 
+  ggplot(aes(height, mass, 
+             color = eye_color, 
+             shape = sex)) +
+  geom_point(size = 3, 
+             alpha = 0.7) +
+  scale_y_log10() +
+  labs(x = "Height (cm)", 
+       y = "Mass (kg)") +
+  theme_minimal()
+
 # Gayoung
 #############################################
+# ggplot demonstration 3: Boxplot
 # boxplot: simple
 box_simple <- starwars %>% 
   select(height, mass, eye_color) %>% 
@@ -65,7 +142,7 @@ box_simple +
   coord_flip()
 
 #########################################
-
+# ggplot demonstration 4: Facet plot
 # facet_wrap
 starwars %>% 
   select(height, mass, eye_color) %>% 
