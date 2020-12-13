@@ -29,22 +29,27 @@ starwars_selected <-
 
 #############################################
 # ggplot demonstration 1: Histogram
-# histogram for height
+# histogram for BMI
 starwars_selected %>% 
   ggplot(aes(BMI)) +
   geom_histogram() +
   theme_minimal()
 
-# histogram for mass 
+# histogram for mass with sex group
 starwars %>% 
-  ggplot(aes(mass)) +
+  select(mass, 
+         sex) %>% 
+  ggplot(aes(mass, fill = sex)) +
   geom_histogram() +
   theme_minimal()
 
-# only mass less than 1000
+# only mass less than 500 and get rid of NA values
 starwars %>% 
-  filter(mass < 1000) %>% 
-  ggplot(aes(mass)) +
+  select(mass, 
+         sex) %>%
+  drop_na() %>% 
+  filter(mass < 500) %>% 
+  ggplot(aes(mass, fill = sex)) +
   geom_histogram() +
   theme_minimal()
 
