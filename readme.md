@@ -25,23 +25,24 @@ Backup is https://rstudio.cloud/ if you have a problem with your computer.
 - Create a new RStudio project 
 - Run `install.packages("tidyverse")` in the console
 
-### 3. reading and inspecting data (LW)
-- Read data and take a look, intro to dataframe
-- Get basic summary information about our dataset
+### 3. Inspecting data (LW)
+- Load data and take a look, intro to dataframe
+- Get basic summary of data
 
-### 4. Data manipulation with dplyr and tidyr (LW)
-- Select specific columns and rows using select () and filter ()
-- Intro to the concept of pipes
-- Create new columns using mutate ()
+### 4. Data manipulation (LW)
+- Select specific columns to simply data
+- Select specific data points 
+- Create new variables 
 
-### 5. Data visualization with ggplot2- Histogram and Scatterplots (LW)
+### 5. Data visualization with ggplot2- Histogram and Scatter plots (LW)
 - Histogram for one variable
-- Scatterplots for two variables 
+- Scatter plots for multiple variables
 
 ### 6. Data visualization with ggplot2- Boxplots and Faceting (GP)
-- Boxplots and play with themes
-- Faceting to create multiple plots
-- Name a title and change X & Y axis labels
+- Boxplots 
+- Add annoatation and reverse x & y axis
+- Facet plot and change scales
+- Explore themes and add title & labels
 
 ## Setup instructions
 
