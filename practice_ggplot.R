@@ -18,7 +18,7 @@ summary(starwars)
 #############################################
 # Demonstration 2: Data manipulation
 # use select, filter, and mutate
-starwars_selected <-
+starwars_selected <- # assignment operator
   starwars %>% # the pipe takes everything before it to the next function call. Shift + command + M
   select(height, 
          mass, 
@@ -29,8 +29,9 @@ starwars_selected <-
 
 #############################################
 # ggplot demonstration 1: Histogram
-# histogram for BMI
+# histogram for BMI 
 starwars_selected %>% 
+  drop_na() %>% # drop NA values
   ggplot(aes(BMI)) +
   geom_histogram() +
   theme_minimal()
@@ -39,11 +40,12 @@ starwars_selected %>%
 starwars %>% 
   select(mass, 
          sex) %>% 
+  drop_na() %>% 
   ggplot(aes(mass, fill = sex)) +
   geom_histogram() +
   theme_minimal()
 
-# only mass less than 500 and get rid of NA values
+# only mass less than 500 
 starwars %>% 
   select(mass, 
          sex) %>%
@@ -62,9 +64,10 @@ starwars %>%
   geom_point() +
   theme_minimal()
 
-# log value
+# log scale and drop NA values
 starwars %>% 
   select(height, mass, eye_color, sex) %>% 
+  drop_na() %>% 
   ggplot(aes(height, mass)) +
   geom_point() +
   scale_y_log10() +
@@ -73,6 +76,7 @@ starwars %>%
 # add two more variables represented by color and shape
 starwars %>% 
   select(height, mass, eye_color, sex) %>% 
+  drop_na() %>% 
   ggplot(aes(height, mass, 
              color = eye_color, 
              shape = sex)) +
@@ -80,7 +84,7 @@ starwars %>%
   scale_y_log10() +
   theme_minimal()
 
-# increase point size and remove NA values
+# increase size and transparency of data points
 starwars %>% 
   select(height, mass, eye_color, sex) %>%
   drop_na() %>% 
@@ -90,20 +94,6 @@ starwars %>%
   geom_point(size = 3, 
              alpha = 0.7) +
   scale_y_log10() +
-  theme_minimal()
-
-# update the labels of x and y axis
-starwars %>% 
-  select(height, mass, eye_color, sex) %>%
-  drop_na() %>% 
-  ggplot(aes(height, mass, 
-             color = eye_color, 
-             shape = sex)) +
-  geom_point(size = 3, 
-             alpha = 0.7) +
-  scale_y_log10() +
-  labs(x = "Height (cm)", 
-       y = "Mass (kg)") +
   theme_minimal()
 
 # Gayoung
