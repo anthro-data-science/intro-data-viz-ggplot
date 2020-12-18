@@ -110,17 +110,3 @@ d %>% ggplot( aes(mass, height )) +
         panel.grid = element_line(color="#001a4d")  # some custom colors
     )
     
-#### Iris 
-
-data("iris")
-f <- iris
-
-head(f)
-
-
-f %>% ggplot(aes(Sepal.Length, Sepal.Width)) + 
-    geom_point(aes(color=Species)) + 
-    theme_minimal() + 
-    scale_color_manual(values = c('#3b55ff','tomato','black')) + 
-    geom_point(aes(Petal.Length, Petal.Width, color=Species),pch=21)
-
