@@ -7,7 +7,7 @@ Liying Wang, Gayoung Park, Delaney Glass, Shane Scaggs & Ben Marwick
 Date and time: 01/11/2021 9am-11am Pacific Standard Time
 
 You can register our workshop at this link:
-https://washington.zoom.us/j/6751630285  
+https://washington.zoom.us/meeting/register/tJMqd-Gurj4qEtxIVgp7sbfjrLd-wtF-9EjX 
 
 Here are our [slides](https://docs.google.com/presentation/d/15c764TPcJWQvoZasN5PtVxpwyyqEuLm8V-n7brMvx2I/edit#slide=id.gc6f90357f_0_0)
 
