@@ -1,13 +1,13 @@
-# Intro to data visualisation using ggplot
+# Intro to data visualisation using 'ggplot2'
 
-Delaney Glass, Li-Ying Wang, Gayoung Park, Anwesha Pan, Monica Keith, Shane Scaggs, Ben Marwick, & Melanie Martin
+Liying Wang, Gayoung Park, Delaney Glass, Shane Scaggs & Ben Marwick
 
 ## Details
 
-Date and time: 12/15/20 9am-11am Pacific Standard Time
+Date and time: 01/11/2021 9am-11am Pacific Standard Time
 
-You can join our workshop at this link:
-https://washington.zoom.us/j/91569853974 
+You can register our workshop at this link:
+https://washington.zoom.us/j/6751630285  
 
 Here are our [slides](https://docs.google.com/presentation/d/15c764TPcJWQvoZasN5PtVxpwyyqEuLm8V-n7brMvx2I/edit#slide=id.gc6f90357f_0_0)
 
@@ -26,16 +26,17 @@ Backup is https://rstudio.cloud/ if you have a problem with your computer.
 - Run `install.packages("tidyverse")` in the console
 
 ### 3. Inspecting data (LW)
-- Load data and take a look, intro to dataframe
+- Load and take a look at the data
+- Intro to the dataframe
 - Get basic summary of data
 
 ### 4. Data manipulation (LW)
 - Select specific columns to simply data
 - Select specific data points 
-- Create new variables 
+- Create a new variable 
 
 ### 5. Data visualization with ggplot2- Histogram and Scatter plots (LW)
-- Histogram for one variable
+- Histogram and fill colors
 - Scatter plots for multiple variables
 
 ### 6. Data visualization with ggplot2- Boxplots and Faceting (GP)
@@ -43,6 +44,9 @@ Backup is https://rstudio.cloud/ if you have a problem with your computer.
 - Add annoatation and reverse x & y axis
 - Facet plot and change scales
 - Explore themes and add title & labels
+
+### 7. Showcase (DG, LW, BM, GP & SS)
+- Other plots we can make using ggplot2
 
 ## Setup instructions
 
